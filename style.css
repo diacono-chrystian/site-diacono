@@ -1,79 +1,63 @@
-/* ===== CORES & FONTES ===== */
+/* === CORES LITÚRGICAS & FUNDO === */
 :root {
-  --azul-escuro: #2c3e50;     /* Cor principal (header/footer) */
-  --azul-claro: #3498db;       /* Links */
-  --vermelho: #e74c3c;        /* Destaques/hover */
-  --fundo: #f9f9f9;           /* Cor de fundo */
-  --branco: #ffffff;          /* Seções */
-  --texto: #333;              /* Texto principal */
+  --roxo: #6a1b9a;       /* Advento/Quaresma */
+  --branco: #ffffff;     /* Natal/Páscoa */
+  --verde: #2e7d32;      /* Tempo Comum */
+  --vermelho: #c62828;   /* Ramos/Pentecostes/Mártires */
+  --pergaminho: url('https://img.freepik.com/fotos-premium/textura-de-papel-antigo-vintage-em-tons-de-marrom-claro_7188-3658.jpg');
 }
 
-/* ===== BASE ===== */
+/* === FUNDO DE PERGAMINHO === */
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: var(--fundo);
-  color: var(--texto);
+  background: var(--pergaminho) center/cover fixed;
+  font-family: 'Garamond', 'Times New Roman', serif;
+  color: #333;
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  padding: 20px;
 }
 
-/* ===== CABEÇALHO ===== */
-nav {
-  background: var(--azul-escuro);
+/* === SEÇÕES COLORIDAS === */
+.roxo {
+  background-color: rgba(106, 27, 154, 0.85); /* Roxo com transparência */
+  color: white;
+  border-left: 5px solid var(--roxo);
+}
+
+.branco {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-left: 5px solid var(--branco);
+}
+
+.verde {
+  background-color: rgba(46, 125, 50, 0.85);
+  color: white;
+  border-left: 5px solid var(--verde);
+}
+
+.vermelho {
+  background-color: rgba(198, 40, 40, 0.85);
+  color: white;
+  border-left: 5px solid var(--vermelho);
+}
+
+/* === ESTRUTURA BÁSICA (MANTENHA O QUE JÁ TEM) === */
+section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav, footer {
+  background: rgba(0, 0, 0, 0.7); /* Preto translúcido */
+  color: white;
   padding: 15px;
   text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
 }
 
 nav a {
   color: white;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 4px;
-}
-
-nav a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  margin: 0 10px;
   text-decoration: none;
-}
-
-/* ===== CONTEÚDO ===== */
-section {
-  background: var(--branco);
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* ===== RODAPÉ ===== */
-footer {
-  background: var(--azul-escuro);
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-}
-
-/* ===== CELULAR ===== */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  section {
-    margin: 15px 10px;
-    padding: 15px;
-  }
 }
