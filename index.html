@@ -3,71 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diácono Chrystian - Serviço e Fé</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Garamond&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="img/cruz.ico" type="image/x-icon">
+  <title>Diácono Chrystian</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+    .subtitulo {
+      font-style: italic;
+      color: #7f8c8d;
+    }
+    nav {
+      margin: 20px 0;
+      padding: 10px 0;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background: #ddd;
+      margin: 30px 0;
+    }
+    img {
+      max-width: 100%;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-  <!-- CABEÇALHO UNIFICADO PARA TODAS AS PÁGINAS -->
   <header>
     <h1>Diácono Chrystian</h1>
     <p class="subtitulo">"Servir com alegria, anunciar com fidelidade"</p>
-    
-    <nav aria-label="Menu principal">
-      <ul>
-        <li><a href="index.html" class="ativo">Início</a></li>
-        <li><a href="missao.html">Missão Diaconal</a></li>
-        <li><a href="diaconato-diocese.html">Diaconato na Diocese</a></li>
-        <li><a href="formacao.html">Formação</a></li>
-        <li><a href="oracao.html">Pedido de Oração</a></li>
-        <li><a href="tercos.html">Terços Artesanais</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- CONTEÚDO PRINCIPAL -->
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="missao.html">Missão Diaconal</a>
+    <a href="diaconato.html">Diaconato na Diocese</a>
+    <a href="formacao.html">Formação</a>
+    <a href="oracao.html">Pedido de Oração</a>
+    <a href="tercos.html">Terços Artesanais</a>
+  </nav>
+
   <main>
-    <!-- SEÇÃO COM COR LITÚRGICA (troque a classe conforme o tempo) -->
-    <section class="roxo" aria-labelledby="boas-vindas">
-      <h2 id="boas-vindas">Bem-vindo à Casa Virtual do Serviço Diaconal</h2>
-      <p>Este é um espaço dedicado à formação, espiritualidade e anúncio do Evangelho através do ministério diaconal.</p>
-      <img src="img/diacono-chrystian.jpg" alt="Diácono Chrystian celebrando" class="destaque">
-    </section>
+    <h2>Bem-vindo à Casa Virtual do Serviço Diaconal</h2>
+    <p>Este é um espaço dedicado à formação, espiritualidade e anúncio do Evangelho através do ministério diaconal.</p>
+    
+    <img src="diacono-celebrando.jpg" alt="Diácono Chrystian celebrando">
 
-    <!-- GRADE DE LINKS RÁPIDOS -->
-    <section class="branco" aria-labelledby="acesso-rapido">
-      <h2 id="acesso-rapido">Acesso Rápido</h2>
-      <div class="grid-links">
-        <a href="missao.html" class="card-link verde">
-          <h3>Minha Missão</h3>
-          <p>Conheça o serviço diaconal</p>
-        </a>
-        
-        <a href="oracao.html" class="card-link roxo">
-          <h3>Pedir Oração</h3>
-          <p>Envie sua intenção</p>
-        </a>
-        
-        <a href="tercos.html" class="card-link vermelho">
-          <h3>Terços Artesanais</h3>
-          <p>Peças feitas com devoção</p>
-        </a>
-      </div>
-    </section>
+    <hr>
+
+    <h2>Acesso Rápido</h2>
+    <!-- Adicione aqui os links/boxes de acesso rápido se quiser -->
   </main>
-
-  <!-- RODAPÉ -->
-  <footer>
-    <div class="contato">
-      <p>Contato: <a href="mailto:contato@diaconochrystian.org">contato@diaconochrystian.org</a></p>
-      <div class="redes-sociais">
-        <a href="#"><img src="img/facebook.png" alt="Facebook" width="32"></a>
-        <a href="#"><img src="img/instagram.png" alt="Instagram" width="32"></a>
-        <a href="#"><img src="img/youtube.png" alt="YouTube" width="32"></a>
-      </div>
-    </div>
-    <p class="copyright">&copy; 2025 Ministério do Diácono Chrystian - Diocese de Foz do Iguaçu</p>
-  </footer>
 </body>
 </html>
