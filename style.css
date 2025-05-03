@@ -1,63 +1,119 @@
-/* === CORES LITÚRGICAS & FUNDO === */
+/* === CORES LITÚRGICAS & PERGAMINHO === */
 :root {
   --roxo: #6a1b9a;       /* Advento/Quaresma */
   --branco: #ffffff;     /* Natal/Páscoa */
   --verde: #2e7d32;      /* Tempo Comum */
-  --vermelho: #c62828;   /* Ramos/Pentecostes/Mártires */
+  --vermelho: #c62828;   /* Ramos/Pentecostes */
   --pergaminho: url('https://img.freepik.com/fotos-premium/textura-de-papel-antigo-vintage-em-tons-de-marrom-claro_7188-3658.jpg');
+  --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* === FUNDO DE PERGAMINHO === */
+/* === BASE === */
 body {
   background: var(--pergaminho) center/cover fixed;
   font-family: 'Garamond', 'Times New Roman', serif;
   color: #333;
   margin: 0;
-  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* === SEÇÕES COLORIDAS === */
-.roxo {
-  background-color: rgba(106, 27, 154, 0.85); /* Roxo com transparência */
+/* === CABEÇALHO === */
+header {
+  background: rgba(0, 51, 102, 0.9); /* Azul diocesano com transparência */
   color: white;
-  border-left: 5px solid var(--roxo);
-}
-
-.branco {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-left: 5px solid var(--branco);
-}
-
-.verde {
-  background-color: rgba(46, 125, 50, 0.85);
-  color: white;
-  border-left: 5px solid var(--verde);
-}
-
-.vermelho {
-  background-color: rgba(198, 40, 40, 0.85);
-  color: white;
-  border-left: 5px solid var(--vermelho);
-}
-
-/* === ESTRUTURA BÁSICA (MANTENHA O QUE JÁ TEM) === */
-section {
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 900px;
-  border-radius: 5px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-nav, footer {
-  background: rgba(0, 0, 0, 0.7); /* Preto translúcido */
-  color: white;
-  padding: 15px;
+  padding: 1rem;
   text-align: center;
+  box-shadow: var(--sombra);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* === NAVEGAÇÃO === */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 nav a {
   color: white;
-  margin: 0 10px;
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* === CONTEÚDO PRINCIPAL === */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: var(--sombra);
+}
+
+/* === SEÇÕES COLORIDAS (adicione estas classes no HTML) === */
+.roxo { background: rgba(106, 27, 154, 0.9); color: white; }
+.branco { background: rgba(255, 255, 255, 0.95); }
+.verde { background: rgba(46, 125, 50, 0.9); color: white; }
+.vermelho { background: rgba(198, 40, 40, 0.9); color: white; }
+
+/* === RODAPÉ === */
+footer {
+  background: rgba(0, 51, 102, 0.9);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* === FORMULÁRIO (oracao.html) === */
+form label {
+  display: block;
+  margin-top: 1rem;
+}
+
+form input, 
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background: var(--roxo);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: var(--vermelho);
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 600px) {
+  nav ul { flex-direction: column; align-items: center; }
+  main { margin: 1rem; padding: 1rem; }
 }
