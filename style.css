@@ -1,43 +1,55 @@
-/* === CORES LITÚRGICAS & PERGAMINHO === */
+/* === VARIÁVEIS DE CORES === */
 :root {
+  --fundo-pergaminho: rgb(255, 250, 227); /* Cor do fundo que você enviou */
   --roxo: #6a1b9a;       /* Advento/Quaresma */
-  --branco: #ffffff;     /* Natal/Páscoa */
+  --branco: #ffffff;      /* Natal/Páscoa */
   --verde: #2e7d32;      /* Tempo Comum */
   --vermelho: #c62828;   /* Ramos/Pentecostes */
-  --pergaminho: url('https://img.freepik.com/fotos-premium/textura-de-papel-antigo-vintage-em-tons-de-marrom-claro_7188-3658.jpg');
+  --dourado: #d4af37;    /* Destaques */
   --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* === BASE === */
+/* === ESTILOS GERAIS === */
 body {
-  background: var(--pergaminho) center/cover fixed;
+  background-color: var(--fundo-pergaminho);
   font-family: 'Garamond', 'Times New Roman', serif;
   color: #333;
   margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  padding: 0;
+  line-height: 1.6;
 }
 
 /* === CABEÇALHO === */
 header {
-  background: rgba(0, 51, 102, 0.9); /* Azul diocesano com transparência */
-  color: white;
-  padding: 1rem;
   text-align: center;
-  box-shadow: var(--sombra);
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
 }
 
 header h1 {
   margin: 0;
-  font-size: 1.8rem;
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
 }
 
-/* === NAVEGAÇÃO === */
+.subtitulo {
+  font-style: italic;
+  color: var(--dourado);
+  font-size: 1.2rem;
+}
+
+/* === MENU === */
+nav {
+  background: var(--roxo);
+  padding: 1rem;
+  text-align: center;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 1rem 0;
+  margin: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -47,6 +59,7 @@ nav ul {
 nav a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background 0.3s;
@@ -56,64 +69,95 @@ nav a:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* === CONTEÚDO PRINCIPAL === */
-main {
-  flex: 1;
+.ativo {
+  background: var(--dourado);
+  color: #333;
+}
+
+/* === SEÇÕES COLORIDAS === */
+.secao-roxo {
+  background: var(--roxo);
+  color: white;
+  border-left: 5px solid var(--dourado);
+}
+
+.secao-branco {
+  background: var(--branco);
+  border-left: 5px solid var(--dourado);
+}
+
+.secao-verde {
+  background: var(--verde);
+  color: white;
+  border-left: 5px solid var(--dourado);
+}
+
+.secao-vermelho {
+  background: var(--vermelho);
+  color: white;
+  border-left: 5px solid var(--dourado);
+}
+
+section {
   padding: 2rem;
-  max-width: 900px;
   margin: 2rem auto;
-  background: rgba(255, 255, 255, 0.9);
+  max-width: 900px;
   border-radius: 8px;
   box-shadow: var(--sombra);
 }
 
-/* === SEÇÕES COLORIDAS (adicione estas classes no HTML) === */
-.roxo { background: rgba(106, 27, 154, 0.9); color: white; }
-.branco { background: rgba(255, 255, 255, 0.95); }
-.verde { background: rgba(46, 125, 50, 0.9); color: white; }
-.vermelho { background: rgba(198, 40, 40, 0.9); color: white; }
+/* === CARDS DE ACESSO RÁPIDO === */
+.grid-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card-link {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.card-link:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.3);
+}
 
 /* === RODAPÉ === */
 footer {
-  background: rgba(0, 51, 102, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   color: white;
   text-align: center;
-  padding: 1rem;
-  margin-top: auto;
+  padding: 1.5rem;
+  margin-top: 2rem;
 }
 
-/* === FORMULÁRIO (oracao.html) === */
-form label {
-  display: block;
-  margin-top: 1rem;
+footer a {
+  color: var(--dourado);
 }
 
-form input, 
-form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-form button {
-  background: var(--roxo);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-form button:hover {
-  background: var(--vermelho);
+/* === IMAGENS === */
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: 2px solid var(--dourado);
 }
 
 /* === RESPONSIVO === */
-@media (max-width: 600px) {
-  nav ul { flex-direction: column; align-items: center; }
-  main { margin: 1rem; padding: 1rem; }
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  
+  section {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
 }
