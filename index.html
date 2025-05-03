@@ -3,121 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diácono Chrystian</title>
-  <style>
-    :root {
-      --roxo: #6a1b9a;     /* Advento/Quaresma */
-      --verde: #2e7d32;    /* Tempo Comum */
-      --vermelho: #c62828; /* Ramos/Pentecostes */
-      --dourado: #d4af37;  /* Destaques */
-    }
-    
-    body {
-      font-family: 'Garamond', serif;
-      background: url('https://img.freepik.com/fotos-premium/textura-de-papel-antigo-vintage-em-tons-de-marrom-claro_7188-3658.jpg') fixed;
-      background-size: cover;
-      color: #333;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      line-height: 1.6;
-    }
-    
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 20px;
-      border-radius: 8px;
-    }
-    
-    h1 {
-      color: var(--roxo);
-      margin: 0;
-      font-size: 2.2rem;
-    }
-    
-    .subtitulo {
-      color: var(--dourado);
-      font-style: italic;
-      font-size: 1.2rem;
-    }
-    
-    nav {
-      background: rgba(106, 27, 154, 0.8); /* Roxo litúrgico */
-      padding: 15px;
-      border-radius: 8px;
-      margin: 20px 0;
-      text-align: center;
-    }
-    
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 0 10px;
-      padding: 5px 10px;
-      border-radius: 4px;
-    }
-    
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-    
-    main {
-      background: rgba(255, 255, 255, 0.85);
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    h2 {
-      color: var(--verde);
-      border-bottom: 2px solid var(--dourado);
-      padding-bottom: 5px;
-    }
-    
-    img {
-      max-width: 100%;
-      border: 3px solid var(--dourado);
-      border-radius: 8px;
-      margin: 15px 0;
-      display: block;
-    }
-    
-    hr {
-      border: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--dourado), transparent);
-      margin: 30px 0;
-    }
-  </style>
+  <title>Diácono Chrystian - Ministério Diaconal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Garamond&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/cruz.ico">
 </head>
 <body>
+  <!-- CABEÇALHO -->
   <header>
     <h1>Diácono Chrystian</h1>
     <p class="subtitulo">"Servir com alegria, anunciar com fidelidade"</p>
   </header>
 
+  <!-- MENU -->
   <nav>
-    <a href="index.html">Início</a>
-    <a href="missao.html">Missão Diaconal</a>
-    <a href="diaconato.html">Diaconato na Diocese</a>
-    <a href="formacao.html">Formação</a>
-    <a href="oracao.html">Pedido de Oração</a>
-    <a href="tercos.html">Terços Artesanais</a>
+    <ul>
+      <li><a href="index.html" class="ativo">Início</a></li>
+      <li><a href="missao.html">Missão Diaconal</a></li>
+      <li><a href="diaconato.html">Diaconato na Diocese</a></li>
+      <li><a href="formacao.html">Formação</a></li>
+      <li><a href="oracao.html">Pedido de Oração</a></li>
+      <li><a href="tercos.html">Terços Artesanais</a></li>
+    </ul>
   </nav>
 
+  <!-- CONTEÚDO PRINCIPAL -->
   <main>
-    <h2>Bem-vindo à Casa Virtual do Serviço Diaconal</h2>
-    <p>Este é um espaço dedicado à formação, espiritualidade e anúncio do Evangelho através do ministério diaconal.</p>
-    
-    <img src="diacono-celebrando.jpg" alt="Diácono Chrystian celebrando">
+    <!-- SEÇÃO ROXO (ADVENTO/QUARESMA) -->
+    <section class="secao-roxo">
+      <h2>Bem-vindo à Casa Virtual do Serviço Diaconal</h2>
+      <p>Este é um espaço dedicado à formação, espiritualidade e anúncio do Evangelho através do ministério diaconal.</p>
+      <img src="img/diacono-celebrando.jpg" alt="Diácono Chrystian celebrando">
+    </section>
 
-    <hr>
-
-    <h2>Acesso Rápido</h2>
-    <!-- Adicione aqui os links de acesso rápido -->
+    <!-- SEÇÃO VERDE (TEMPO COMUM) -->
+    <section class="secao-verde">
+      <h2>Acesso Rápido</h2>
+      <div class="grid-links">
+        <a href="missao.html" class="card-link">
+          <h3>Missão Diaconal</h3>
+          <p>Conheça o serviço do diácono</p>
+        </a>
+        <a href="oracao.html" class="card-link">
+          <h3>Pedido de Oração</h3>
+          <p>Envie sua intenção</p>
+        </a>
+        <a href="tercos.html" class="card-link">
+          <h3>Terços Artesanais</h3>
+          <p>Peças feitas com devoção</p>
+        </a>
+      </div>
+    </section>
   </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <p>&copy; 2025 Diácono Chrystian - Diocese de Foz do Iguaçu</p>
+    <p>Contato: <a href="mailto:contato@diaconochrystian.org">contato@diaconochrystian.org</a></p>
+  </footer>
 </body>
 </html>
